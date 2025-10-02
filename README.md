@@ -1,59 +1,97 @@
-# MongoDB Fundamentals - Week 1
+PLP MongoDB Bookstore
 
-## Setup Instructions
+This project is a simple MongoDB + Node.js setup for managing a bookstore database. It demonstrates how to insert, query, update, and delete documents in MongoDB using the official Node.js driver.
 
-Before you begin this assignment, please make sure you have the following installed:
+🚀 Features
 
-1. **MongoDB Community Edition** - [Installation Guide](https://www.mongodb.com/docs/manual/administration/install-community/)
-2. **MongoDB Shell (mongosh)** - This is included with MongoDB Community Edition
-3. **Node.js** - [Download here](https://nodejs.org/)
+Insert multiple book documents into a collection
 
-### Node.js Package Setup
+Query all books from the database
 
-Once you have Node.js installed, run the following commands in your assignment directory:
+Update book details (e.g., price, stock availability)
 
-```bash
-# Initialize a package.json file
+Delete specific books
+
+Connects to MongoDB locally (127.0.0.1:27017)
+
+📂 Project Structure
+PLP Mongodb/
+│── insert_books.js   # Inserts 12 books into the 'books' collection
+│── queries.js        # Run queries like find, update, delete
+│── package.json      # Node.js dependencies
+│── README.md         # Project documentation
+│── 12 books inthe db.jpg   # Screenshot showing inserted books in MongoDB
+
+
+📸 Example Screenshot:
+
+
+⚙️ Setup Instructions
+1️⃣ Clone or Download the Project
+
+If it’s in GitHub:
+
+git clone <your-repo-link>
+cd PLP\ Mongodb
+
+
+Or manually copy the folder into your system.
+
+2️⃣ Install Dependencies
+
+Run inside the project folder:
+
 npm init -y
-
-# Install the MongoDB Node.js driver
 npm install mongodb
-```
 
-## Assignment Overview
+3️⃣ Run the Insert Script
 
-This week focuses on MongoDB fundamentals including:
-- Creating and connecting to MongoDB databases
-- CRUD operations (Create, Read, Update, Delete)
-- MongoDB queries and filters
-- Aggregation pipelines
-- Indexing for performance
+This will drop existing data (if any) and insert 12 books.
 
-## Submission
+node insert_books.js
 
-Complete all the exercises in this assignment and push your code to GitHub using the provided GitHub Classroom link.
 
-## Getting Started
+Expected output:
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
+Connected to MongoDB server
+Collection already contains 12 documents. Dropping collection...
+Collection dropped successfully
+12 books were successfully inserted into the database
 
-## Files Included
+4️⃣ Run Queries
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+To query, update, or delete books, run:
 
-## Requirements
+node queries.js
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
 
-## Resources
+Examples:
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+Find all books
+
+Delete a book by title
+
+Update book price or stock
+
+View Data in MongoDB Compass
+
+Open MongoDB Compass
+
+Connect to:
+
+mongodb://127.0.0.1:27017
+
+
+Select database: plp_bookstore
+
+Open collection: books
+
+You will see all inserted documents.
+
+📖 Technologies Used
+
+MongoDB (Database)
+
+Node.js (Runtime)
+
+MongoDB Node.js Driver
