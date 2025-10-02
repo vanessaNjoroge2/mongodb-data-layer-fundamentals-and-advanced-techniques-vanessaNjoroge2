@@ -73,7 +73,7 @@ Delete a book by title
 
 Update book price or stock
 
-View Data in MongoDB Compass
+5️⃣ View Data in MongoDB Compass
 
 Open MongoDB Compass
 
